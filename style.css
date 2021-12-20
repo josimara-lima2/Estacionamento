@@ -1,0 +1,36 @@
+body{
+    background-color: #fafafa;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    margin-bottom: 10px;
+}
+#cadastrar{
+    width: 100px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    background-color: cadetblue;
+    color: #fafafa;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delete{
+    background-color: rgb(247, 7, 7);
+    border:none;
+    cursor: pointer;
+    color: #fafafa;
+    border-radius: 2px;
+}
