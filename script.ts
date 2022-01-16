@@ -5,7 +5,9 @@ interface Veiculo{
 
 }
 
-
+interface  Array < T >  { 
+    find ( predicate : ( valor : T ,  index : number ,  obj : Array < T > )  =>  boolean ,  thisArg ?: any ) : T  |  undefined ; 
+}
 (function(){
     const $ = (query:string): HTMLInputElement | null => document.querySelector(query)
 
@@ -23,9 +25,10 @@ interface Veiculo{
             localStorage.setItem("patio", JSON.stringify(veiculos))
         }
         function remover(placa:string){
+            
             const {entrada, nome} = ler().find(veiculo => veiculo.placa === placa)
-
-            const tempo = calcTempo( new Date().getTime() - new Date(entrada).getTime())
+            const entradaString = String(entrada)
+            const tempo = calcTempo( new Date().getTime() - new Date(entradaString).getTime())
             if(!confirm(`O veiculo ${nome} permaneceu por ${tempo}. Deseja encerrar?`)){
                 return
             }
